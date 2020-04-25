@@ -1,10 +1,1 @@
-{
-  "architecture": "amd64",
-  "features": "",
-  "variant": null,
-  "digest": "sha256:6fb33693dc6b33755f64a94dc894da1a0b88896780f40274fd9423733103d305",
-  "os": "linux",
-  "os_features": "",
-  "os_version": null,
-  "size": 97684283
-}
+sha256:6fb33693dc6b33755f64a94dc894da1a0b88896780f40274fd9423733103d305

@@ -21,5 +21,5 @@ jobs:
         title: Update Image Digest
         base: master
         branch: update-image-Digest
-        commit-message: Update Imge Digest
+        commit-message: Update Image Digest
         committer: hitode909+image-updater<hitode909@image-updater@gmail.com>

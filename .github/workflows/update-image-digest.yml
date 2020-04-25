@@ -1,0 +1,25 @@
+---
+
+name: Update Image Digest
+on:
+  pull_request:
+  schedule:
+  - cron: '0 * * * *'
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: ./crawl.sh
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        title: Update Image Digest
+        base: master
+        branch: update-image-Digest
+        commit-message: Update Imge Digest
+        committer: hitode909+image-updater<hitode909@image-updater@gmail.com>

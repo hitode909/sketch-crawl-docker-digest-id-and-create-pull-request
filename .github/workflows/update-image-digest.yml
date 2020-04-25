@@ -4,7 +4,7 @@ name: Update Image Digest
 on:
   pull_request:
   schedule:
-  - cron: '0 * * * *'
+  - cron: '0 0 * * *'
 jobs:
   update:
     runs-on: ubuntu-latest
